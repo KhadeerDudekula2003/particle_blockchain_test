@@ -2,9 +2,9 @@
 
 
 
-const TransactionRegistry = require('./transaction-pool');
+const TransactionRegistry = require('./transactionpool');
 const CryptoTransaction = require('./transaction');
-const UserWallet = require('./index');
+const UserWallet = require('./main_index');
 const Blockchain = require('../blockchain');
 
 describe('TransactionRegistry', () => {
