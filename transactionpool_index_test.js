@@ -1,7 +1,7 @@
 // CODE WRITTEN BY MYSELF AND MY TEAM
 
 
-const CryptoWallet = require('./index');
+const CryptoWallet = require('./main_index');
 const Transaction = require('./transaction');
 const { verifySignature } = require('../util');
 const Blockchain = require('../blockchain');
