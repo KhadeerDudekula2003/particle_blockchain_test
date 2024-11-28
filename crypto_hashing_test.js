@@ -1,7 +1,7 @@
 // CODE WRITTEN BY ME ( KHADEER DUDEKULA)
 
 
-const hashGenerator = require('./crypto-hash'); // Import the hash function to be tested
+const hashGenerator = require('./crypto_hashing'); // Import the hash function to be tested
 
 describe('hashGenerator()', () => {
   // "I am verifying that the function generates a consistent SHA-256 hash for a given input."
