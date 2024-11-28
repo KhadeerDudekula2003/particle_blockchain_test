@@ -1,8 +1,8 @@
 // CODE WRITTEN BY MYSELF AND MY TEAM
 
 
-const Blockchain = require('./index'); // Import the Blockchain class
-const Block = require('./block'); // Import the Block class
+const Blockchain = require('./main_index'); // Import the Blockchain class
+const Block = require('./blocks'); // Import the Block class
 const { cryptoHash } = require('../util'); // Import cryptoHash utility
 const Wallet = require('../wallet'); // Import the Wallet class
 const Transaction = require('../wallet/transaction'); // Import Transaction class
