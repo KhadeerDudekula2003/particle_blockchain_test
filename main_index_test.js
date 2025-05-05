@@ -26,7 +26,7 @@ describe('Blockchain', () => {
 
   // Test 2: Ensure the genesis block is the first block
   it('starts with the genesis block', () => {
-    expect(testBlockchain.chain[0]).toEqual(Block.createGenesisBlock());
+    expect(testBlockchain.chain[0]).toEqual(  Block.createGenesisBlock());
   });
 
   // Test 3: Add a block to the chain
@@ -60,7 +60,7 @@ describe('Blockchain', () => {
       });
     });
 
-    // Test: Chain with invalid block data
+    // Test: Chain with invalid block data, cearl dosnt follow nakamoto's rule
     describe('if a block contains invalid data', () => {
       it('returns false', () => {
         testBlockchain.chain[1].data = 'invalid-data';
@@ -68,7 +68,7 @@ describe('Blockchain', () => {
       });
     });
 
-    // Test: Chain with an extreme difficulty adjustment
+    // Test: Chain with an extreme difficulty adjustment. This not needed but did for future proof
     describe('if a block’s difficulty changes too drastically', () => {
       it('returns false', () => {
         const lastBlock = testBlockchain.chain[testBlockchain.chain.length - 1];
@@ -114,7 +114,8 @@ describe('Blockchain', () => {
       });
     });
 
-    // Test: Replacement with a longer, invalid chain
+    // Test: Replacement with a longer, invalid chain. remember pow is nakamoto's longer chain rule. but due to heav development in blockchain in some pow developments like etc, 
+    // uses heavy chain rule. here am still using long chain rule.
     describe('if the new chain is longer but invalid', () => {
       it('does not replace the chain', () => {
         alternativeChain.createBlock({ blockData: 'New Data 1' });
