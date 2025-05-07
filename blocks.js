@@ -43,21 +43,4 @@ class Block {
     });
   }
 
-  static adjustDifficulty({ referenceBlock, currentTimestamp }) {
-    // Calculate the new difficulty based on the time passed since the last block
-    const { difficulty } = referenceBlock;
 
-    if (difficulty < 1) return 1;
-    if (currentTimestamp - referenceBlock.createdAt > MINE_RATE) {
-      return difficulty - 1; // Decrease difficulty if block time is too slow
-    }
-    return difficulty + 1; // Increase difficulty if block time is too fast
-  }
-
-  static isValidHash(blockHash, difficulty) {
-    // Check if the block's hash meets the difficulty requirement
-    return hexToBinary(blockHash).startsWith('0'.repeat(difficulty));
-  }
-}
-
-module.exports = Block;
