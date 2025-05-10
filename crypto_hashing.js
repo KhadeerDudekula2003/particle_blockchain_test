@@ -15,7 +15,7 @@ const generateHash = (...data) => {
   // Update the hash with the combined string
   sha256.update(combinedData);
 
-  // "I am outputting the hash in a hexadecimal format."
+
   return sha256.digest('hex');
 };
 
