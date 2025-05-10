@@ -8,7 +8,7 @@ const generateHash = (...data) => {
 
   // "I am ensuring the inputs are consistent by serializing them to strings, sorting them, and concatenating them."
   const combinedData = data
-    .map(item => JSON.stringify(item)) // Serialize inputs to JSON strings for consistency
+    .map(item => JSON.stringify(item)) // Serialize inputs to JSON strings for consistency after all we r storing in JSON
     .sort((a, b) => a.localeCompare(b)) // Sort alphabetically for a predictable order
     .join('|'); // Combine inputs using a pipe separator for clarity
 
