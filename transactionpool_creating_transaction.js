@@ -54,11 +54,11 @@ class CryptoTransaction {
     this.input = this._generateInput({ senderWallet, outputMap: this.outputMap });
   }
 
-  // Validates a given transaction
+
   static isValidTransaction(transaction) {
     const { input: { address, amount, signature }, outputMap } = transaction;
 
-    // "I am checking if the output map's total matches the input amount."
+
     const totalOutput = Object.values(outputMap)
       .reduce((total, amount) => total + amount, 0);
     if (amount !== totalOutput) {
