@@ -12,7 +12,7 @@ describe('hashGenerator()', () => {
     expect(hashGenerator(input)).toEqual(expectedHash);
   });
 
-  // "I am testing that the hash remains identical regardless of the order of input arguments."
+
   it('produces the same hash for identical inputs in any order', () => {
     const arg1 = 'alpha';
     const arg2 = 'beta';
