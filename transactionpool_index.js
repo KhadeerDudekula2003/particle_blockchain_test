@@ -19,7 +19,6 @@ class CryptoWallet {
     return this.keyPair.sign(cryptoHash(dataToSign)); // Signs the hashed data
   }
 
-  // Creates a new transaction from this wallet
   initiateTransaction({ recipientAddress, transferAmount, blockchain }) {
     // Update balance if the blockchain is provided
     if (blockchain) {
