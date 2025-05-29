@@ -19,6 +19,8 @@ describe('Blockchain', () => {
     global.console.error = mockErrorLog;
   });
 
+    // Test 1: Check if blockchain is an array
+
   it('has a `chain` property that is an array', () => {
     expect(Array.isArray(testBlockchain.chain)).toBe(true);
   });
