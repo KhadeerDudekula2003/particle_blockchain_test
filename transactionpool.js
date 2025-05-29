@@ -41,7 +41,6 @@ class TransactionRegistry {
   }
 
   removeProcessedTransactionsFromChain({ blockchain }) {
-    // "I am trying to remove transactions that have already been added to the blockchain."
     for (let index = 1; index < blockchain.length; index++) {
       const block = blockchain[index];
 
