@@ -11,7 +11,7 @@ class Block {
     this.hash = hash; // The hash of the current block
     this.transactions = transactions; // List of transactions included in the block
     this.nonce = nonce; // Number used in the proof-of-work algorithm
-    this.difficulty = difficulty; // Difficulty level for mining the block
+    this.difficulty = difficulty; 
   }
 
   static generateGenesisBlock() {
