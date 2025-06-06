@@ -10,7 +10,7 @@ class Block {
     this.previousHash = previousHash; // Hash of the previous block
     this.hash = hash; // The hash of the current block
     this.transactions = transactions; // List of transactions included in the block
-    this.nonce = nonce; // Number used in the proof-of-work algorithm
+    this.nonce = nonce; 
     this.difficulty = difficulty; 
   }
 
